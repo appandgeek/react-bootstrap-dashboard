@@ -13,3 +13,4 @@ export function addElement(value) {
     result: value
   };
 }
+export const HIDESUB = "HIDE_SUB";

@@ -89,12 +89,13 @@ const initialState = {
       tags: ["Java", "vue", "Springs"]
     }
   ],
-  commentStatus: false,
+  commentStatus: true,
   tabStatus: 1,
   addModal: false,
   hasSub: false,
   toggleSidebar: false,
-  shortMenu: false
+  shortMenu: false,
+
 };
 
 const reducer = (state = initialState, action) => {
@@ -120,6 +121,13 @@ const reducer = (state = initialState, action) => {
         ...state,
 
         hasSub: !state.hasSub
+      };
+    case actionTypes.HIDESUB:
+
+      return {
+        ...state,
+
+        hasSub: false
       };
     case actionTypes.SHORTMENU:
       return {

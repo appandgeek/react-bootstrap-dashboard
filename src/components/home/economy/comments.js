@@ -32,9 +32,9 @@ const comments = (props) => {
                             props.status ?
 
                                 props.comment[0].pending.map((pending, index) =>
-                                    <div className="tab-pane fade show active" id="commentsTab1" role="tabpanel">
+                                    <div className="tab-pane fade show active" id="commentsTab1" role="tabpanel" key={index}>
                                         <div className="list-group list-lg-group list-group-flush"></div>
-                                        <a className="list-group-item list-group-item-action" key={index} href="#">
+                                        <a className="list-group-item list-group-item-action" href="#">
                                             <div className="media">
                                                 <img className="u-avatar rounded-circle mr-3" src={pending.avatar} alt="Image description" />
                                                 <div className="media-body">
@@ -57,9 +57,9 @@ const comments = (props) => {
                                 :
 
                                 props.comment[0].approved.map((approved, index) =>
-                                    <div className="tab-pane fade show active" id="commentsTab2" role="tabpanel">
+                                    <div className="tab-pane fade show active" id="commentsTab2" role="tabpanel" key={index}>
                                         <div className="list-group list-lg-group list-group-flush"></div>
-                                        <a className="list-group-item list-group-item-action" key={index} href="#">
+                                        <a className="list-group-item list-group-item-action" href="#">
                                             <div className="media">
                                                 <img className="u-avatar rounded-circle mr-3" src={approved.avatar} alt="Image description" />
                                                 <div className="media-body">

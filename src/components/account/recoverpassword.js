@@ -38,7 +38,7 @@ const recoverpassword = () => (
                     <div className="row" style={{ 'textAlign': 'left' }}>
                         <div className="col-lg-6 d-flex flex-column justify-content-center align-items-center bg-white mnh-100vh">
                             <Link className="u-login-form py-3 mb-auto" to="/">
-                                <img className="img-fluid float-left" src="./assets/img/logo.png" style={{ 'width': 160 }} alt="Stream Dashboard UI Kit" />
+                                <img className="img-fluid" src="./assets/img/logo.png" style={{ 'width': 160 }} alt="Stream Dashboard UI Kit" />
                             </Link>
 
                             <div className="u-login-form ">
@@ -46,8 +46,8 @@ const recoverpassword = () => (
 
 
                                 <form className="mb-3" onSubmit={handleSubmit}>
-                                    <h1 className="h2 float-left">Recover Your Password</h1><br />
-                                    <p className="float-left small justify-content" style={{ 'margin-left': '-1%' }}>If you do not receive an email, please make sure to check your spam folder as well.</p>
+                                    <h1 className="h2">Recover Your Password</h1>
+                                    <p className="small " >If you do not receive an email, please make sure to check your spam folder as well.</p>
 
 
                                     <div className="form-group mb-4">
@@ -57,7 +57,7 @@ const recoverpassword = () => (
                                         } name="email" id="email" type="email" placeholder="john.doe@example.com" onChange={handleChange}
                                             onBlur={handleBlur}
                                             value={values.email} />
-                                        <small class="text-danger">
+                                        <small className="text-danger">
                                             {errors.email && touched.email && errors.email}
                                         </small>
 

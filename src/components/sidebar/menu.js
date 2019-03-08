@@ -6,30 +6,32 @@ import { withRouter } from 'react-router-dom';
 
 class Menu extends Component {
 
+
     render() {
 
+        const currentPath = window.location.pathname;
 
         return (
 
             <ul className="u-sidebar-nav-menu u-sidebar-nav-menu--top-level" >
 
-                <li className="u-sidebar-nav-menu__item">
-                    <Link className="u-sidebar-nav-menu__link" to="/dashboard">
+                <li className="u-sidebar-nav-menu__item " onClick={this.props.hideSub}>
+                    <Link className={currentPath.includes('forms') || currentPath.includes('tables') || currentPath.includes('profile') ? "u-sidebar-nav-menu__link" : "u-sidebar-nav-menu__link active"} to="/dashboard">
                         <i className="fa fa-cubes u-sidebar-nav-menu__item-icon"></i>
                         <span className="u-sidebar-nav-menu__item-title">Dashboard</span>
                     </Link>
                 </li>
 
-                <li className="u-sidebar-nav-menu__item">
+                <li className="u-sidebar-nav-menu__item" onClick={this.props.hideSub}>
 
-                    <Link className="u-sidebar-nav-menu__link" to="/forms">
+                    <Link className={currentPath.includes('forms') ? "u-sidebar-nav-menu__link active" : "u-sidebar-nav-menu__link"} to="/forms">
                         <i className="far fa-edit u-sidebar-nav-menu__item-icon"></i>
                         <span className="u-sidebar-nav-menu__item-title">Forms</span>
                     </Link>
                 </li>
 
-                <li className="u-sidebar-nav-menu__item">
-                    <Link className="u-sidebar-nav-menu__link" to="/tables">
+                <li className="u-sidebar-nav-menu__item" onClick={this.props.hideSub}>
+                    <Link className={currentPath.includes('tables') ? "u-sidebar-nav-menu__link active" : "u-sidebar-nav-menu__link"} to="/tables">
                         <i className="far fa-list-alt u-sidebar-nav-menu__item-icon"></i>
                         <span className="u-sidebar-nav-menu__item-title">Tables</span>
                     </Link>
@@ -45,6 +47,13 @@ class Menu extends Component {
                     </a>
 
                     <ul id="subMenu2" className={this.props.hasSub ? "u-sidebar-nav-menu u-sidebar-nav-menu--second-level displayMenu" : "u-sidebar-nav-menu u-sidebar-nav-menu--second-level hideMenu"} >
+
+                        <li className="u-sidebar-nav-menu__item" onClick={this.props.hasMenu}>
+                            <Link className={currentPath.includes('profile') ? "u-sidebar-nav-menu__link active" : "u-sidebar-nav-menu__link"} to="/profile">
+                                <span className="u-sidebar-nav-menu__item-icon">P</span>
+                                <span className="u-sidebar-nav-menu__item-title">Profile</span>
+                            </Link>
+                        </li>
 
                         <li className="u-sidebar-nav-menu__item">
                             <Link className="u-sidebar-nav-menu__link" to="/signup">
@@ -95,7 +104,8 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-        hasMenu: () => dispatch({ type: actionTypes.HASSUB })
+        hasMenu: () => dispatch({ type: actionTypes.HASSUB }),
+        hideSub: () => dispatch({ type: actionTypes.HIDESUB })
     }
 
 }
