@@ -34,6 +34,20 @@ class Home extends Component {
               type: "pro",
               comment: "This is test comment",
               date_commented: "02 feb 2018"
+            },
+            {
+              username: "Tanya",
+              avatar: "./assets/img/avatars/img3.jpg",
+              type: "pro",
+              comment: "This is test comment",
+              date_commented: "02 feb 2018"
+            },
+            {
+              username: "Hashmika",
+              avatar: "./assets/img/avatars/img4.jpg",
+              type: "pro",
+              comment: "This is test comment",
+              date_commented: "02 feb 2018"
             }
           ],
           pending: [
@@ -47,6 +61,20 @@ class Home extends Component {
             {
               username: "sathish",
               avatar: "./assets/img/avatars/img4.jpg",
+              type: "pro",
+              comment: "This is pending test comment",
+              date_commented: "02 august 2018"
+            },
+            {
+              username: "Shiva",
+              avatar: "./assets/img/avatars/img1.jpg",
+              type: "pro",
+              comment: "This is pending test comment",
+              date_commented: "02 august 2018"
+            },
+            {
+              username: "ahana",
+              avatar: "./assets/img/avatars/img2.jpg",
               type: "pro",
               comment: "This is pending test comment",
               date_commented: "02 august 2018"

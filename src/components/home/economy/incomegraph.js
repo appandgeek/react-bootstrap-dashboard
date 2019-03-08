@@ -29,19 +29,19 @@ class Incomegraph extends Component {
 
                     <ul className="nav nav-tabs card-header-tabs ml-md-auto mt-3 mt-md-0">
                         <li className="nav-item mr-4">
-                            <a className="nav-link active" href="#" role="tab" aria-selected="true" data-toggle="tab" onClick={this.props.switchTab.bind(this, 1)}>
+                            <a className={this.props.tabs == 1 ? "nav-link active" : "nav-link "} href="#" role="tab" aria-selected="true" data-toggle="tab" onClick={this.props.switchTab.bind(this, 1)}>
                                 <span className="d-none d-md-inline">Last</span>
                                 7 days
 						</a>
                         </li>
                         <li className="nav-item mr-4">
-                            <a className="nav-link" href="#" role="tab" aria-selected="false" data-toggle="tab" onClick={this.props.switchTab.bind(this, 2)}>
+                            <a className={this.props.tabs == 2 ? "nav-link active" : "nav-link "} href="#" role="tab" aria-selected="false" data-toggle="tab" onClick={this.props.switchTab.bind(this, 2)}>
                                 <span className="d-none d-md-inline">Last</span>
                                 30 days
 						</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#" role="tab" aria-selected="false" data-toggle="tab" onClick={this.props.switchTab.bind(this, 3)}>
+                            <a className={this.props.tabs == 3 ? "nav-link active" : "nav-link "} href="#" role="tab" aria-selected="false" data-toggle="tab" onClick={this.props.switchTab.bind(this, 3)}>
                                 <span className="d-none d-md-inline">Last</span>
                                 90 days
 						</a>

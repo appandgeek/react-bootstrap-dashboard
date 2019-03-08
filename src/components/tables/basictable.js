@@ -29,17 +29,20 @@ class basicTable extends Component {
 
     handleClick(val) {
 
-        if (this.state.showShort != val) {
+        if (this.state.showShort !== val) {
+
             this.setState({
 
                 showShort: val
             });
+            document.addEventListener('click', this.handleOutsideClick, false);
         }
         else {
             this.setState({
 
                 showShort: 0
             });
+            document.removeEventListener('click', this.handleOutsideClick, false);
         }
 
 
